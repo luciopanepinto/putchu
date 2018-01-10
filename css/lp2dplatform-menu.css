@@ -1,0 +1,351 @@
+﻿#menu-background, #menu-active  { 
+	border: solid 1px #000;
+	background-color: #000;
+	overflow: hidden;
+	opacity: 0.85;
+	right: -1000px;
+	left: initial;
+	margin: auto;
+}
+#menu-active { 
+	background-color: transparent;
+	opacity: 1.00;
+}
+
+#menu-background[data-key='SELECTPLAYER'], #menu-background[data-key='ENTERNAME'], #menu-background[data-key='DELETEPLAYER'] { 
+	opacity: 0.55;
+}
+#menu-background[data-key='SELECTPLAYER'], #menu-active[data-key='SELECTPLAYER'], 
+#menu-background[data-key='ENTERNAME'], #menu-active[data-key='ENTERNAME'], 
+#menu-background[data-key='DELETEPLAYER'], #menu-active[data-key='DELETEPLAYER'],  
+#menu-background[data-key='PAUSE'], #menu-active[data-key='PAUSE'], 
+#menu-background[data-key='GAMEOVER'], #menu-active[data-key='GAMEOVER'] { 
+	border: solid 0px #000;
+	height: 265px;
+	top: initial;
+	bottom: 60px;
+	z-index: 111111;
+	position: inherit;
+	display: inline;
+	width: 550px;
+}
+#menu-background[data-key='PAUSE'], #menu-active[data-key='PAUSE'] { 
+	bottom: 120px;
+	height: 210px;
+	width: 480px;
+}
+#menu-background[data-key='GAMEOVER'], #menu-active[data-key='GAMEOVER'] { 
+	bottom: 240px;
+	height: 95px;
+	text-align: center;
+}
+#menu-active[data-key='SELECTPLAYER'] h1, #menu-active[data-key='ENTERNAME'] h1, #menu-active[data-key='DELETEPLAYER'] h1 { 
+	font-size: 24px;
+	color: #fff;
+}
+#menu-active[data-key='PAUSE'] h1 { 
+	font-size: 36px;
+	color: #fff;
+}
+#menu-active[data-key='GAMEOVER'] h1 { 
+	font-size: 36px;
+	color: yellow;
+}
+
+#menu-entername table { 
+    width: 450px;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+	margin-top: 20px;
+}
+#menu-entername table tr td[data-selected='true'] { 
+	border-color: #f1f5a4;
+	color: #f1f5a4;
+}
+#menu-entername table tr td { 
+	font-size: 20px;
+	border-bottom: solid 3px transparent;
+	text-align: center;
+	padding: 0px 2px 0px 2px;
+	text-transform: uppercase;
+}
+#menu-entername table tr td[data-action='DEL'] { 
+	background-image: url("../img/menu/keyboard-del.png");
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+    background-size: 26px 20px;
+}
+#menu-entername table tr td[data-action='DEL'][data-selected='true'] { 
+	background-image: url("../img/menu/keyboard-del-hover.png");
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+    background-size: 26px 20px;
+}
+
+#menu-selectplayer ul, #menu-deleteplayer ul, #menu-pause ul, #menu-inventory-item-description ul { 
+	list-style-type: none;
+	margin: 20px 0px 0px 25px;
+	padding: 0px;
+}
+#menu-selectplayer li, #menu-deleteplayer li, #menu-pause li, #menu-inventory-item-description li { 
+	position: relative;
+	background-image: none;
+	padding: 0px 0px 0px 25px;
+}
+#menu-deleteplayer li { 
+	padding-left: 30px;
+}
+#menu-selectplayer #cards-actions, #menu-deleteplayer #menu-confirm, #menu-inventory-item-description #menu-confirm { 
+	margin-right: 50px;
+	text-align: right;
+}
+
+#menu-selectplayer li[data-selected='true'], #menu-deleteplayer li[data-selected='true'], #menu-pause li[data-selected='true'], #menu-inventory-item-description li[data-selected='true'] { 
+	background-image: url("../img/menu/select-active.png");
+    background-repeat: no-repeat;
+    background-position: 0px 6px;
+    background-size: 24px;
+}
+
+#menu-deleteplayer > #cards > li[data-selected='true'] { 
+	background-image: url("../img/menu/select-active-delete.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='0'] { 
+	background-image: url("../img/menu/select-delete-0.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='1'] { 
+	background-image: url("../img/menu/select-delete-1.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='2'] { 
+	background-image: url("../img/menu/select-delete-2.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='3'] { 
+	background-image: url("../img/menu/select-delete-3.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='4'] { 
+	background-image: url("../img/menu/select-delete-4.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='5'] { 
+	background-image: url("../img/menu/select-delete-5.png");
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='end'] { 
+	background-image: none;
+}
+#menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='end'] .card-label, #menu-deleteplayer > #cards > li[data-selected='true'][data-delete-progress='end'] .card-heart { 
+	visibility: hidden;
+}
+
+#menu-selectplayer li > div, #menu-selectplayer #cards-actions li, #card-entername > div, #menu-deleteplayer li > div, #menu-inventory-item-description  #menu-confirm li { 
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+}
+#menu-selectplayer #cards-actions li, #menu-deleteplayer #menu-confirm li, #menu-inventory-item-description #menu-confirm li { 
+	margin-left: 50px;
+	height: 30px;
+	background-position: 0px 0px;
+}
+#menu-deleteplayer #menu-confirm li { 
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 20px; 
+	font-weight: bold;
+	font-size: 20px;
+}
+#menu-inventory-item-description #menu-confirm li { 
+	margin-left: 5px;
+}
+
+.card-heart span { 
+	background-image: url("../img/item/heart-0.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px;
+	height: 18px;
+	width: 18px;
+	padding: 0px 1px 0px 0px;
+	position: relative;
+	display: inline-block;
+}
+.card-label { 
+	width: 135px;
+	max-width: 135px;
+	overflow: hidden;
+}
+
+#menu-selectplayer li[data-selected='true'] > div, #cards-actions li[data-selected='true'], #menu-deleteplayer li[data-selected='true'] > div, #menu-deleteplayer #menu-confirm li[data-selected='true'], #menu-pause li[data-selected='true'], #menu-inventory-item-description #menu-confirm li[data-selected='true'] { 
+	color: #f1f5a4;
+}
+#menu-selectplayer li div.card-number, #card-entername div.card-number, #menu-deleteplayer li div.card-number { 
+	background-color: #fff;
+	color: #000;
+	padding: 0px 5px 0px 5px;
+}
+#menu-selectplayer li[data-selected='true'] div.card-number, #menu-deleteplayer li[data-selected='true'] div.card-number { 
+	background-color: #f1f5a4;
+}
+#card-entername { 
+	margin: 0px 0px 0px 50px;
+}
+
+#menu-map, #menu-inventory-item-key, #menu-inventory-item-usable, #menu-inventory-item-skill { 
+	background-color: transparent;
+	border: solid 3px #fff;
+	border-radius: 5px;
+	padding: 15px 0px 0px 10px;
+	display: inline;
+	position: inherit;
+	z-index: 111111;
+}
+#menu-map h1, #menu-inventory-item-key h1, #menu-inventory-item-usable h1, #menu-inventory-item-skill h1 { 
+	position: absolute;
+	top: -17px;
+	left: 10px;
+	font-size: 16px;
+	background-color: #000;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+#menu-inventory-item-key div, #menu-inventory-item-usable div, #menu-inventory-item-skill div { 
+	width: 65px;
+	height: 65px;
+	min-width: 65px;
+	min-height: 65px;
+	max-width: 65px;
+	max-height: 65px;
+	border: solid 2px transparent;
+	margin: 0px 0px 0px 2px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	z-index: 333333;	
+}
+#menu-inventory-item-key div[data-selected='false'], #menu-inventory-item-usable div[data-selected='false'], #menu-inventory-item-skill div[data-selected='false'] { 
+	border: solid 2px transparent;
+}
+#menu-inventory-item-key div[data-selected='true'], #menu-inventory-item-usable div[data-selected='true'], #menu-inventory-item-skill div[data-selected='true'] { 
+    -webkit-animation: blink-border 0.35s step-start infinite;
+            animation: blink-border 0.35s step-start infinite;
+}
+#menu-inventory-item-key div img, #menu-inventory-item-usable div img, #menu-inventory-item-skill div img { 
+	max-width: 60px;
+	max-height: 60px;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	display: inline-table;
+	position: absolute;
+}
+#menu-map { 
+	top: auto;
+	right: auto;
+	bottom: 20px;
+	left: 20px;
+	width: 685px;
+	height: 455px;
+}
+#menu-inventory-item-key, #menu-inventory-item-usable, #menu-inventory-item-skill { 
+	top: auto;
+	left: auto;
+	width: 220px;
+	right: 20px;
+	left: initial;
+}
+#menu-inventory-item-key span, #menu-inventory-item-usable span, #menu-inventory-item-skill span { 
+	position: absolute;
+	bottom: 3px;
+	right: 6px;
+	font-size: 16px; 
+}
+#menu-inventory-item-key { 
+	height: 223px;
+	bottom: 252px;
+}
+#menu-inventory-item-usable { 
+	height: 75px;
+	bottom: 135px;
+}
+#menu-inventory-item-skill { 
+	height: 75px;
+	bottom: 20px;
+}
+#menu-inventory-item-description h1 { 
+	font-size: 20px;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	color: yellow;
+}
+#menu-inventory-item-description { 
+	font-size: 20px;
+	color: #fff;
+	padding: 15px;
+	position: absolute;
+	display: inline-block;
+	z-index: 444444;
+	background-color: #000;
+	border: solid 1x #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	right: 270px;
+	width: 450px;
+}
+
+#menu-map-world-container { 
+	max-width: 625px;
+	max-height: 425px;
+	overflow: hidden;
+}
+#menu-map-world { 
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+
+	background-image: url("../img/map/map-0.png");
+	width: 5923px;
+	height: 981px;
+	max-width: 5923px;
+	max-height: 981px;
+}
+#menu-map-world-explore { 
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+
+	background-image: url("../img/menu/explore-map.png");
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	z-index: 888888;
+	
+    -webkit-animation: blink 0.75s step-end infinite;
+            animation: blink 0.75s step-end infinite;
+}
+.map-world-element, .map-world-element-current { 
+	position: absolute;
+	background-color: #333;
+	border: solid 1px #000;
+	z-index: 888888;
+	opacity: 1;
+}
+.map-world-element[data-visited='true'], .map-world-element-current { 
+	background-color: transparent;
+}
+.map-world-element-current { 
+    -webkit-animation: pulse 0.90s infinite;
+            animation: pulse 0.90s infinite;
+	border: solid 3px #fff;
+	z-index: 999999;
+	background-color: #fff;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}

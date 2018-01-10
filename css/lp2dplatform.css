@@ -1,0 +1,240 @@
+﻿@font-face { 
+	font-family: joystix; 
+	src: url('../css/font/joystix.ttf');
+}
+@font-face { 
+	font-family: joystixEOT; 
+	src: url('../css/font/joystix.eot') format('eot');
+}
+* { 
+	font-family: joystix, joystixEOT; 
+	font-size: 26px;
+	color: #fff;
+}
+
+html, body { 
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.toolkit { 
+	position: absolute;
+	right: 0px;
+	top: -35px;
+	opacity: 0.35;
+}
+.toolkit.sound { 
+	opacity: 0.50;
+}
+.toolkit:hover { 
+	opacity: 1.0;
+}
+.toolkit img { 
+	height: 18px;
+}
+.toolkit.help { 
+	right: 28px;
+}
+.toolkit.sound { 
+	right: 56px;
+}
+
+#main { 
+	padding: 5px;
+	margin: auto;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	border: solid 0px red;
+}
+#main h1 { 
+	letter-spacing: normal;
+	font-size: 40px;
+	text-transform: uppercase;
+	padding: 0px;
+	margin: 25px 0px 5px 25px;
+	color: #fff;
+}
+
+#main, #game, #home-div, 
+#menu-background, #menu-active, #menu-map, #menu-map-world, #menu-map-world-container, #menu-inventory-item-key, #menu-inventory-item-usable, #menu-inventory-item-skill, 
+#player-canvas, #hub-canvas, #waters-canvas, #waters-falls-canvas, #waters-falls-front-canvas, #waters-falls-splashs-canvas, #waters-falls-splashs-front-canvas, #waters-splash-1-canvas, #waters-splash-2-canvas, #waters-splash-3-canvas, 
+#monster-0-canvas, #monster-1-canvas, #monster-2-canvas, #monster-3-canvas, #monster-4-canvas, #monster-5-canvas, #projectiles-canvas, 
+#background-canvas, #text-div, 
+#grounds-canvas, #grounds-front-canvas, #grounds-moving-canvas, 
+#walls-canvas, #walls-front-canvas, #blocks-canvas, 
+#interacts-canvas, #pnjs-canvas, 
+#animations-canvas, #animations-front-canvas, 
+#decorations-canvas, #decorations-middle-canvas, #decorations-front-canvas, 
+#scrolling-canvas, #scrolling-front-canvas, 
+#opacity-canvas , #screen-transition-effect-left, #screen-transition-effect-right { 
+	width: 1000px;
+	height: 550px;
+	max-width: 1000px;
+	max-height: 550px;
+	position: absolute;
+	margin: auto;
+	padding: 0px;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 111111;
+	outline: 0;
+}
+
+#home-div { 
+	z-index: 999999;
+}
+#screen-transition-effect-left { 
+	background-color: #000;
+	left: -1000px;
+	right: initial;
+	margin: auto;
+	border: solid 1px #000;
+}
+#screen-transition-effect-right { 
+	background-color: #000;
+	right: -1000px;
+	left: initial;
+	margin: auto;
+	border: solid 1px #000;
+}
+#game { 
+	border: solid 0px #ccc;
+	background-color: #000;
+	overflow: hidden;
+}
+
+
+#scrolling-canvas, #scrolling-front-canvas { 
+	background-repeat: repeat;
+}
+
+#waters-falls-splashs-canvas, #waters-falls-splashs-front-canvas { 
+	opacity: 0.85;
+}
+#waters-canvas, #waters-falls-canvas, #waters-falls-front-canvas { 
+	opacity: 0.65;
+}
+#waters-splash-1-canvas, #waters-splash-2-canvas, #waters-splash-3-canvas { 
+	opacity: 0.90;
+}
+
+#ressources img { 
+	display: none;
+}
+
+#text-div div { 
+	position: absolute;
+	margin: auto;
+	padding: 25px;
+	left: 25px;
+	height: 95px;
+	width: 850px;
+	background-color: #000;
+	text-transform: uppercase;
+	font-size: 24px;
+	opacity: 0.75;
+}
+#text-div div #text-confirm { 
+	right: 0px;
+	height: 20px;
+	bottom: 0px;
+	position: absolute;
+	background-color: transparent;
+	opacity: 1;
+	text-align: right;
+}
+#text-confirm ul { 
+	list-style-type: none;
+	margin: 0px 10px 0px 0px;
+	padding: 0px;
+}
+#text-confirm li { 
+	position: relative;
+	background-image: none;
+	padding: 0px 35px 0px 25px;
+	display: inline;
+}
+#text-confirm li[data-selected='true'] { 
+	background-image: url("../img/menu/select-active.png");
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    background-size: 24px;
+	color: #f1f5a4;
+}
+#text-div div.up, #text-div div.player-down { 
+	top: 25px;
+}
+#text-div div.down, #text-div div.player-up { 
+	bottom: 25px;
+}
+#text-div div .next, #text-div div .end { 
+	position: absolute;
+	bottom: 5px;
+	right: 25px;
+	height: 32px;
+}
+#text-div div .next:not(.pause) {
+    -webkit-animation: blink 1s step-end infinite;
+            animation: blink 1s step-end infinite;
+}
+#text-div span { 
+	font-weight: inherit;
+	font-size: inherit;
+}
+#text-div span[data-arrow] { 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20px;
+    width: 22px;
+    height: 20px;
+    display: inline-table;
+    margin-right: 9px;
+}
+#text-div span[data-arrow='right'] { background-image: url("../img/reading/reading-arrow-right.png"); }
+#text-div span[data-arrow='left'] { background-image: url("../img/reading/reading-arrow-left.png"); }
+#text-div span[data-arrow='up'] { background-image: url("../img/reading/reading-arrow-up.png"); }
+#text-div span[data-arrow='down'] { background-image: url("../img/reading/reading-arrow-down.png"); }
+
+#text-div span[data-text-type^='place'] { color: #87ce49; }
+#text-div span[data-text-type^='person'] { color: #41a9ff; }
+#text-div span[data-text-type^='object'] { color: #ffb26b; }
+#text-div span[data-text-type^='skill'] { color: #ee5f5f; }
+#text-div span[data-text-type^='key-'] { color: #f8e641; }
+
+@-webkit-keyframes blink { 50% { visibility: hidden; } } 
+        @keyframes blink { 50% { visibility: hidden; } } 
+
+@-webkit-keyframes blink-border { 50% { border-color: yellow; } } 
+        @keyframes blink-border { 50% { border-color: yellow; } } 
+		
+@media screen and (min-height:1200px), screen and (min-device-height : 1200px) { 
+	body { 
+		-webkit-transform: scale(1.25);
+		-moz-transform: scale(1.25);
+		transform: scale(1.25);
+	}
+}
+
+@media screen and (max-width:1024px) and (min-width:720px), screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+	body { 
+		-webkit-transform: scale(1.01);
+		-moz-transform: scale(1.01);
+		transform: scale(1.01);
+	}
+}
+
+@media screen and (max-width:720px) and (min-width:360px), screen and (min-device-width : 360px) and (max-device-width : 720px) { 
+	body { 
+		-webkit-transform: scale(0.50);
+		-moz-transform: scale(0.50);
+		transform: scale(0.50);
+	}
+}

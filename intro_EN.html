@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<title>Putchu</title>
+		
+		<meta property="og:image" content="http://www.putchu.be/img/intro/preview-0.png">
+		<meta property="og:url" content="http://www.putchu.be/">
+		<meta property="og:description" content="2D Platform Game in Pixel Art">
+		<meta property="og:title" content="Lucio PANEPINTO - Putchu">
+
+		<meta charset="UTF-8">
+		
+		<meta name="description" content="Putchu" />
+		<meta name="keywords" content="putchu,game,online,free,html5,2d,platform,lucio panepinto,lucio,panepinto,panda" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	
+		<link rel="alternate" hreflang="x-default" href="http://www.putchu.be/" />
+		<link rel="alternate" hreflang="en-gb" href="http://www.putchu.be/intro_EN.html" />
+		<link rel="alternate" hreflang="en-us" href="http://www.putchu.be/intro_EN.html" />
+		<link rel="alternate" hreflang="en" href="http://www.putchu.be/intro_EN.html" />
+		<link rel="alternate" hreflang="de" href="http://www.putchu.be/intro_EN.html" />
+		<link rel="alternate" hreflang="it" href="http://www.putchu.be/intro_EN.html" />
+		<link rel="alternate" hreflang="fr-be" href="http://www.putchu.be/intro.html" />
+		<link rel="alternate" hreflang="fr-ca" href="http://www.putchu.be/intro.html" />
+		<link rel="alternate" hreflang="fr-ch" href="http://www.putchu.be/intro.html" />
+		<link rel="alternate" hreflang="fr" href="http://www.putchu.be/intro.html" />
+	
+		<link rel="stylesheet" type="text/css" href="css/putchu-intro.css" />
+	
+		<link rel="icon" type="image/ico" href="favicon.ico" />
+		
+		<script type="text/javascript" src="js/dist/jquery.js"></script>
+		<script type="text/javascript" src="js/dist/lp2dplatform-startup.js"></script>
+		
+		<script type="text/javascript">
+			$( document ).ready( function( e ) { 
+				$( "#intro-footer-div").html( ( $( "#intro-footer-div").html() ).split( "[year]" ).join( new Date().getFullYear() ) );
+			} ); 
+			function play() { 
+				setStartup( "1" );
+				window.location.replace( "index.html" );
+			}
+			function testConfig() { 
+				setStartup( "2" );
+				window.location.replace( "index.html" );
+			}
+			function setLang( lang ) { 
+				if ( localStorage && localStorage !== null ) { 
+					localStorage.setItem( "LANG", lang );
+				}
+				window.location.replace( getPageLangForStartup() );
+			}
+		</script>
+		
+	</head>
+		
+	<body>
+
+		<div class="bg"></div>
+		
+		<div id="intro-sup-div"></div>
+		<div id="intro-div">
+			<div class="player"></div>
+			<div class="logo">Putchu</div>
+		</div>
+		
+		<div id="intro-main-div">
+		
+			<div id="intro-lang">
+				<a href="javascript:void(0);" onClick="setLang('FR');">Français</a> <span>-</span>
+				<a href="javascript:void(0);" class="here" onClick="setLang('EN');">English</a>
+			</div>
+		
+			<div id="intro-controls">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="QM2G7VZV2FBTW">
+					<input type="image" src="https://www.paypalobjects.com/en_US/BE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<div>
+					Donate will motivate me to keep this project going and allow me to develop other free applications. 
+				</div>
+				<a href="javascript:void(0);" onClick="play();">Play</a>
+			</div>
+		
+			<p class="super">
+				Platforms / Adventure 2D game in pixel art on PC. <br>
+				Will you succeed to go home ? Explore the world of Putchu, 
+				fight monsters, and discover the legend of the Panda. 
+			</p>
+			<p>
+				<a href="javascript:void(0);" onClick="testConfig();">If you want to check your browser...</a>
+			</p>
+			<br>
+			<h2>How to play ?</h2>
+			<h3>Player</h3>
+			<p>
+				<span><em>Arrow Left:</em>Move Left</span>
+				<span><em>Arrow Right:</em>Move Right</span>
+				<span><em>Arrow Up:</em>Interact</span>
+				<span><em>Arrow Down:</em>Crouch</span>
+				<span><em>Q:</em>Jump</span>
+				<span><em>P/ESC:</em>Pause</span>
+				<span><em>I:</em>Inventory</span>
+			</p>
+			<h3>Inventory</h3>
+			<p>
+				<span><em>SPACE:</em>Map mode / Objects mode</span>
+				<span><em>Arrow Left:</em>Move Left</span>
+				<span><em>Arrow Right:</em>Move Right</span>
+				<span><em>Arrow Up:</em>Move Up</span>
+				<span><em>Arrow Down:</em>Move Down</span>
+				<span><em>Q/S/ENTER:</em>Center map / Select object</span>
+				<span><em>ESC:</em>Cancel</span>
+			</p>
+			<h3>Menu</h3>
+			<p>
+				<span><em>Arrow Left:</em>Move Left</span>
+				<span><em>Arrow Right:</em>Move Right</span>
+				<span><em>Arrow Up:</em>Move Up</span>
+				<span><em>Arrow Down:</em>Move Down</span>
+				<span><em>Q/S:</em>Select</span>
+				<span><em>ENTER:</em>Confirm</span>
+				<span><em>ESC:</em>Cancel</span>
+			</p>
+			<br>
+			<h2>Screenshots</h2>
+			<p>
+				<img src="img/intro/screenshot-1.png" alt="" width="400px">
+				<img src="img/intro/screenshot-2.png" alt="" width="400px">
+				<img src="img/intro/screenshot-3.png" alt="" width="400px">
+				<img src="img/intro/screenshot-4.png" alt="" width="400px">
+			</p>
+			
+			<div id="intro-footer-div">&copy;[year] Lucio PANEPINTO&nbsp;<br><a href="mailto:lucio.panepinto@gmail.com?subject=Putchu">lucio.panepinto@gmail.com</a>&nbsp;</div>
+		</div>
+		
+		<div id="intro-footer-container"></div>
+	
+	</body>
+	
+</html>

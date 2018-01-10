@@ -1,3 +1,18 @@
+# Putchu files
+index-dev.html
+INSTALL.txt
+js/*
+!js/dist/
+js/dist/lp2dplatform-min.js
+
+# Git files
+.gitattributes
+.gitignore
+
+# Google files
+manifest.json
+icon_128.png
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -31,13 +46,9 @@ $RECYCLE.BIN/
 # Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
+# Files that might appear on external disk
 .Spotlight-V100
-.TemporaryItems
 .Trashes
-.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
 .AppleDB

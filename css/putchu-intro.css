@@ -1,0 +1,207 @@
+﻿@font-face { 
+	font-family: joystix; 
+	src: url('../css/font/joystix.ttf');
+}
+@font-face { 
+	font-family: joystixEOT; 
+	src: url('../css/font/joystix.eot');
+}
+* { 
+	font-family: joystix, joystixEOT; 
+	color: #fff;
+	text-shadow: 2px 2px #000;
+}
+
+html, body { 
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background-color: #000;
+}
+
+#intro-sup-div, #intro-div, #intro-main-div, #intro-footer-div, #intro-footer-container { 
+	padding: 0px;
+	margin: auto;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	position: relative;
+	width: 950px;
+	height: 100%;
+	opacity: 1.00;
+	background-color: #88a879;
+}
+#intro-sup-div { 
+	height: 250px;
+	opacity: 0.60;
+	background-color: #fff;
+}
+#intro-main-div { 
+	background-color: #4c6441;
+	position: relative;
+	padding-top: 85px;
+}
+#intro-footer-div { 
+	position: relative;
+	text-align: right;
+	font-size: 18px;
+	background-color: transparent;
+	top: 55px; 
+	z-index: 999999;
+}
+#intro-footer-container { 
+	background-image: url("../img/intro/footer.png");
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	background-size: 1250px;
+	background-color: transparent;
+	height: 150px;
+	width: 100%;
+}
+
+h2, h3, p { 
+	padding-left: 50px;
+}
+h2  { 
+	font-size: 32px;
+	font-weight: bold;
+	color: #f6ec5b;
+}
+h3 { 
+	font-size: 22px;
+	font-weight: bold;
+	color: #f6ec5b;
+}
+p span { 
+	font-size: 18px;
+	display: block;
+}
+p span em { 
+	display: inline-block;
+	width: 225px;
+	text-align: right;
+	font-size: inherit;
+	font-style: normal;
+	padding-right: 20px;
+	color: #f7f090;
+}
+p.super { 
+	font-size: 20px;
+	padding-right: 40px;
+	padding-top: 10px;
+}
+
+p img { 
+	padding: 10px;
+}
+
+#intro-lang { 
+	position: absolute;
+	right: 0px;
+	top: -250px;
+	font-size: 22px;
+	background-color: #000;
+	padding: 5px 15px 5px 15px;
+	opacity: 0.65;
+	text-decoration: uppercase;
+}
+#intro-lang a { 
+	text-decoration: none;
+}
+#intro-lang a:hover { 
+	text-decoration: underline;
+}
+
+#intro-lang span { 
+	font-weight: normal;
+	color: #fff;
+}
+
+a:hover, a.here { 
+	color: #f6ec5b;
+	text-decoration: underline;
+}
+
+p > a, p > a:hover, #intro-footer-div a { 
+	text-decoration: none;
+	color: #2ab1c3;
+	font-size: 20px;
+}
+p > a:hover, #intro-footer-div a:hover { 
+	text-decoration: underline;
+}
+#intro-footer-div a { 
+	font-size: 18px;
+}
+
+#intro-controls { 
+	position: absolute;
+	right: 50px;
+	top: 30px
+}
+#intro-controls a { 
+	padding: 10px 20px 10px 20px;
+	background-color: #2ab1c3;
+	font-size: 32px;
+	border: solid 0px #fff;
+	text-decoration: none;
+	box-shadow: 5px 5px #14545d;
+	text-shadow: 2px 2px #000;
+}
+#intro-controls a:hover { 
+	text-decoration: underline;
+}
+#intro-controls > div { 
+    font-size: 12px;
+    width: 320px;
+    right: 310px;
+    position: absolute;
+	color: #ffaf9f;
+	top: -3px;
+}
+#intro-controls > form { 
+	right: 199px;
+	top: -3px;
+	display: inline-block;
+	position: absolute;
+}
+
+.bg, .player, .logo, .footer  { 
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+	background-size: cover;
+	display: inline-block;
+	position: absolute;
+	opacity: 1.0;
+}
+.bg { 
+	background-image: url("../img/intro/bg.png");
+	background-position: 0% 100%;
+	height: 250px;
+	width: 100%;
+}
+.player { 
+	background-image: url("../img/intro/player.png");
+	background-size: contain;
+	height: 270px;
+	width: 300px;
+	top: -180px;
+	left: 25px;
+	z-index: 999999;
+}
+
+.logo { 
+	font-size: 110px;
+	font-weight: bold;
+	height: 150px;
+	width: 600px;
+	top: -220px;
+	right: 50px;
+	color: #8f0e68;
+	text-shadow: 5px 5px 10px #000000;
+	letter-spacing: 1px;
+}
+.logo::first-letter { 
+	font-size: 160px;
+}

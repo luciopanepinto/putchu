@@ -1,0 +1,30 @@
+#end { 
+	font-size: 38px;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 5px;	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin: auto;
+	width: 900px;
+	text-align: center;
+	overflow: hidden;
+	top: 250px;
+}
+
+#end .end-gameover { 
+	font-size: 42px;
+	color: #f6f867;
+	letter-spacing: 10px;
+}
+#end .end-title { 
+	font-size: 46px;
+	color: #f6f867;
+}
+#end .end-text { 
+	font-size: 40px;
+	color: #fff;
+}
