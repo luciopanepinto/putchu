@@ -5,6 +5,9 @@ js/*
 !js/dist/
 js/dist/lp2dplatform-min.js
 
+# Apache files
+.htaccess
+
 # Git files
 .gitattributes
 .gitignore
