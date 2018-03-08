@@ -26,6 +26,8 @@ var LOADED_RESSOURCES = 0;
 
 var VERIFY_RESSOURCES_TIMER = null;
 var VERIFY_RESSOURCES_SPEED = 150;
+var VERIFY_RESSOURCES_COUNTER = 0;
+var VERIFY_RESSOURCES_COUNTER_MAX = 150;
 
 function loadRessources( callback ) { 
 
@@ -35,6 +37,7 @@ function loadRessources( callback ) {
 		return; 
 	}	
 	
+	VERIFY_RESSOURCES_COUNTER = 0;
 	VERIFY_RESSOURCES_TIMER = setInterval( function() { verifyRessources( callback ) }, VERIFY_RESSOURCES_SPEED );
 	
 	for ( var i = 0, imax = IMAGES_RESSOURCES.length; i < imax; i ++ ) { 
@@ -75,7 +78,18 @@ function verifyRessources( callback ) {
 		eval( callback + ";" );
 	} else { 
 		var t = parseInt( ( LOADED_RESSOURCES / IMAGES_RESSOURCES.length ) * 100 );
-		var m = ""; if ( t > 75 ) m += "<br>" + eval( "TEXT_LOADING_STILL_" + LANG )
+		var m = ""; 
+		if ( t > 75 ) { 
+			m += "<br>" + eval( "TEXT_LOADING_STILL_" + LANG );
+		}
+		
+		VERIFY_RESSOURCES_COUNTER ++;
+		if ( VERIFY_RESSOURCES_COUNTER > VERIFY_RESSOURCES_COUNTER_MAX ) { 
+			"stop" in window ? window.stop : document.execCommand("Stop");
+			setStartup( STARTUP );
+			window.location.replace( "index.html" );
+		}
+
 		$( "#loading" ).html( eval( "TEXT_LOADING_" + LANG ) + " " + t + "%" + m );
 	}
 }
